@@ -1,2 +1,2 @@
 # fastgoodcheap
-You can only have 2
+You want a Fast, Good, and Cheap project?
