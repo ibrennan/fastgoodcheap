@@ -30,7 +30,28 @@
   </head>
 
 	<body>
-		<h1>Fast Good Cheap</h1>
+    <div class="container">
+      <input type="checkbox" id="good">
+      <label class="green" for="good">GOOD</label>
+
+      <input type="checkbox" id="cheap">
+      <label class="blue" for="cheap">CHEAP</label>
+
+      <input type="checkbox" id="fast">
+      <label class="red" for="fast">FAST</label>
+    </div>
+    <script>
+      let checked = [];
+      Array.from(document.querySelectorAll('input[type="checkbox"]')).forEach(checkbox => {
+        checkbox.addEventListener('change', e => {
+          if ( checkbox.checked && checked.length === 2 ) {
+            const uncheckTarget = checked[Math.floor(Math.random() * checked.length)];
+            uncheckTarget.checked = false;
+          }
+          checked = document.querySelectorAll('input[type="checkbox"]:checked');
+        });
+      });
+    </script>
 	</body>
 
 </html>
