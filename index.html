@@ -230,7 +230,7 @@
       </div>
     </footer>
     <script>
-      let checked = [];
+      var checked = [];
       [].forEach.call(document.querySelectorAll('input[type="checkbox"]'), function(checkbox) {
         checkbox.addEventListener('change', function(e) {
           ga('send', 'event', 'checkbox', 'trigger');
