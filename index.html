@@ -34,12 +34,15 @@
       }
 
       input[type="checkbox"] {
-        display: none;
+        position: relative;
+        top: 40px;
+        width: 72px;
+        height: 26px;
       }
 
       input[type="checkbox"]:checked + label.green:before {
         background: #88a97a;
-      }
+      } 
 
       input[type="checkbox"]:checked + label.green:after {
         background: #80c265;
@@ -62,6 +65,35 @@
       input[type="checkbox"]:checked + label.red:after {
         background: #c0646c;
         transform: translateX(100%);
+      }
+
+
+
+
+
+
+      input[type="checkbox"]:checked:focus + label.green:before {
+        background: #6d8f5f;
+      } 
+
+      input[type="checkbox"]:checked:focus + label.green:after {
+        background: #61a048;
+      }
+
+      input[type="checkbox"]:checked:focus + label.blue:before {
+        background: #58698d;
+      }
+
+      input[type="checkbox"]:checked:focus + label.blue:after {
+        background: #4d68a4;
+      }
+
+      input[type="checkbox"]:checked:focus + label.red:before {
+        background: #84575e;
+      }
+
+      input[type="checkbox"]:checked:focus + label.red:after {
+        background: #a14850;
       }
 
       input[type="checkbox"] + label {
@@ -95,6 +127,14 @@
         -webkit-box-shadow: 6px 6px 21px -5px rgba(0,0,0,0.61);
         -moz-box-shadow: 6px 6px 21px -5px rgba(0,0,0,0.61);
         box-shadow: 6px 6px 21px -5px rgba(0,0,0,0.61);
+      }
+
+      input[type="checkbox"]:focus + label:after {
+        background-color: #acacac;
+      }
+
+      input[type="checkbox"]:focus + label:before {
+        background-color: #636363;
       }
 
       footer {
@@ -171,7 +211,7 @@
 
 	<body>
     <div class="container">
-      <input type="checkbox" id="fast">
+      <input type="checkbox" id="fast" >
       <label class="red" for="fast">FAST</label>
 
       <input type="checkbox" id="good">
