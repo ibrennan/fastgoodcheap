@@ -240,7 +240,7 @@
         checkbox.addEventListener('change', function(e) {
           ga('send', 'event', 'checkbox', 'trigger');
           if ( checkbox.checked && checked.length === 2 ) {
-            const uncheckTarget = checked[Math.floor(Math.random() * checked.length)];
+            var uncheckTarget = checked[Math.floor(Math.random() * checked.length)];
             uncheckTarget.checked = false;
           }
           checked = document.querySelectorAll('input[type="checkbox"]:checked');
