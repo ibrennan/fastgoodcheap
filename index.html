@@ -257,6 +257,12 @@
     </div>
   </footer>
   <script>
+    const names = window.location.hash.replace('#','').split(',');
+    if (names.length === 3) {
+      document.querySelector('label[for="fast"]').textContent = names[0];
+      document.querySelector('label[for="good"]').textContent = names[1];
+      document.querySelector('label[for="cheap"]').textContent = names[2];
+    }
     document.querySelector('body').className = 'has-js';
     var checked = [];
     [].forEach.call(document.querySelectorAll('input[type="checkbox"]'), function (checkbox) {
