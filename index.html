@@ -33,9 +33,15 @@
       text-decoration: none;
       color: #6583c5;
     }
+    
+    @keyframes showMe {
+      to   { visibility: visible; }
+    }
 
     .container {
       margin-top: -50px;
+      animation: showMe 0s 0.3s forwards;
+      visibility: hidden;
     }
 
     input[type="checkbox"] {
